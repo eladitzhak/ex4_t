@@ -22,13 +22,13 @@
             <!--<input type="text" placeholder="Username">-->
             <!--<input type="password" placeholder="Password">-->
 
-            <input type="text" name="fullName" placeholder="Fullname" id="input_id" onkeyup="checkInput()">
+            <input type="text" name="fullName" placeholder="Fullname" id="input_id" required onkeyup="checkInput()">
             <!--<label>password:(UpperCase, LowerCase and Number) </label>-->
             <input type="password" placeholder="Password (upper,lower,num)" required name="pass" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
 
             <input type="email" required name="mail" placeholder="Email">
 
-            <input type="url" name="website" id="webInput" placeholder="Website">
+            <input type="url" name="website" id="webInput" placeholder="Website" onkeyup="checkInput()">
             <input type="tel" name="phone" placeholder="Phone" pattern="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]">
 
             <input type="number" name="coffee" placeholder="Number of Coffee cups">

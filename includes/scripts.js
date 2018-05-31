@@ -8,6 +8,8 @@ console.log ("insite the JddS!");
 var counter = 0;
 
 var webInput=document.getElementById("webInput");
+var runawaybtn=document.getElementById("runaway");
+var flagClicked=0;
 window.onload=function(){
 
 //check why validation form does not call
@@ -47,11 +49,12 @@ window.onload=function(){
         },
 
         showWin: function (e) {
+
             alert('Nice! GOOD JOB!!');
             var x = document.getElementById('input_id').value;
             counter++;
             console.log("count is", counter);
-            if (counter > 2) {
+            if ((counter > 2) && (flagClicked >0)) {
                 var x2 = document.getElementById("click");
                 if (x2.type === "hidden") {
                     x2.type = "submit";
@@ -67,6 +70,9 @@ window.onload=function(){
                 }, 5000);
             }else if (counter == 2){
                 input_id.value="";
+                runawaybtn.disabled=true;
+                dis();
+
             }
 
         }
@@ -79,14 +85,22 @@ function checkInput(){
     if (counter==2){
         counter++;
         input_id.style.backgroundColor="red";
+        runawaybtn.disabled=false;
+        flagClicked=1;
+        input_id.value="";
         setTimeout(function(){
 
             input_id.style.opacity = "0";
-        }, 4000);
+        }, 2000);
+        input_id.style.marginLeft="500px";
 
         input_id.style.columnGap = "50px";
         webInput.style.cursor="wait";
+        input_id.style.marginLeft="-90px";
         oops();
+        if (input_id.value!=""){
+            input_id.value="";
+        }
 
 
     }
@@ -165,4 +179,22 @@ function oops() {
 
     }
 
+}
+
+function dis() {
+
+    {
+        var h = document.createElement("H3");
+        var t = document.createTextNode("make sure to fill fields MANUALLY!! :)");
+        h.appendChild(t);
+        document.body.appendChild(h);
+        // var temp = document.getElementsById("myForm");
+        setTimeout(function () {
+
+            document.body.removeChild(document.body.lastChild);
+        }, 4000);
+
+        return false;
+
+    }
 }

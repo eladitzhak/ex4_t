@@ -267,4 +267,12 @@ form button:hover {
 h3{
   position: absolute;
   background-color: yellow;
+    color:black;
+}
+
+#input_id{
+
+    /*size: 5px;*/
+
+
 }
