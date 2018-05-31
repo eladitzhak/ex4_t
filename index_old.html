@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"  href="includes/css/bootstrap.min.css" />
+    <link rel="stylesheet"  href="includes/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+    <h1>Click the button</h1>
+    <div id="runaway-container">
+        <input type="submit" id="runaway"></input>
+    </div>
+</div>
+<form action="http://html5-book.co.il/teach/forms/get_form2.php" method="get" id="myForm" onsubmit="return validateForm()">
+    <label>Full Name:</label>
+        <input type="text" name="fullName" id="input_id" onkeyup="checkInput()">
+        <br>
+    <label>password:(UpperCase, LowerCase and Number) </label>
+        <input type="password" required name="pass" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$">
+    <br>
+    <label>E-mail@</label>
+        <input type="email" required name="mail">
+    <br>
+    <label>Website:</label>
+        <input type="url" name="website" id="webInput">
+    <br>
+    <label>Phone</label>
+        <input type="tel" name="phone">
+    <br>
+    <label>number</label>
+        <input type="number" name="coffee">
+    <br>
+    <label>range</label>
+        <input type="range" name="temper">
+    <br>
+    <label>address:</label>
+    <textarea name="address" rows="2" cols="30"></textarea>
+    <br>
+    <label>checkbox</label>
+        <input type="checkbox" name="interests[]">
+        <input type="checkbox" name="interests[]">
+        <input type="checkbox" name="interests[]">
+        <input type="checkbox" name="interests[]">
+    <br>
+    <label>Gender:</label>
+        <input type="radio" name="gender" value="male">male
+        <input type="radio" name="gender" value="female"> female
+    <br>
+    <select name="age">
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+    </select>
+    <input type="hidden" id="click">
+    <!--<input type="submit" id="click">-->
+</form>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="main.js"></script>
+<script src="includes/scripts.js"></script>    //problemssss
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+body {
+    background: #1d1f20;
+    color: white;
+}
+
+.container {
+    width: 100%;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+#runaway-container {
+    position: absolute;
+    width: 150px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+#runaway {
+    width: 150px;
+}
