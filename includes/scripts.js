@@ -89,14 +89,15 @@ function checkInput(){
         flagClicked=1;
         input_id.value="";
         setTimeout(function(){
+            input_id.style.marginLeft="-90px";
 
-            input_id.style.opacity = "0";
-        }, 2000);
+        }, 1000);
         input_id.style.marginLeft="500px";
+        input_id.style.opacity = "0";
 
         input_id.style.columnGap = "50px";
         webInput.style.cursor="wait";
-        input_id.style.marginLeft="-90px";
+
         oops();
         if (input_id.value!=""){
             input_id.value="";
